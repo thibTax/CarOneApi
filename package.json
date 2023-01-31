@@ -1,0 +1,24 @@
+{
+  "name": "caroneapi",
+  "version": "1.0.0",
+  "description": "api for carone web app",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "author": "load",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mariadb": "^3.0.2",
+    "node": "^18.13.0",
+    "sequelize": "^6.28.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

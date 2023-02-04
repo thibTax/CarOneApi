@@ -1,6 +1,7 @@
 const express = require('express')
 const sequelize = require('./src/dbLocal/sequelize')
 const bodyParser = require ('body-parser')
+const cors = require ('cors')
 
 // déclarer le projet express
 const app = express()
@@ -9,6 +10,7 @@ const port = process.env.PORT || 3002
 //midleware
 app
     .use(bodyParser.json())
+    .use(cors())
 
 //initialiser la bdd avec sequelize
 sequelize.initDb()

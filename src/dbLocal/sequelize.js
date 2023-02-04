@@ -6,12 +6,13 @@ const bcrypt = require ('bcryptjs')
 
 //Instance of sequelize
 const sequelize = new Sequelize(
-    'vehiculedb',
-    'root',
-    '',
+    'dnit8kmk92wlcsc4', //db ?
+    'ie18vzer73vmh2m9', //root
+    'teb7yggddpgqbd7i', //password
     {
-        host: 'localhost',
+        host: 'ao9moanwus0rjiex.cbetxkdyhwsb.us-east-1.rds.amazonaws.com', //localhost
         dialect: 'mariadb',
+        port:'3306', //added
         dialectOptions :{
             timezone: 'Etc/GMT-2'
         },
@@ -68,7 +69,7 @@ const initDb = () =>{
         .then(test => console.log(test.toJSON()))
     })
     bcrypt.hash('load', 10)
-    .then(hash=> User.create({username:'load', password:hash}))
+    .then(hash=> User.create({username:'load@gmail.com', password:hash}))
     .then(user=> console.log(user.toJSON()))
    
     console.log('la bdd est synchronisée')
